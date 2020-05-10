@@ -1,4 +1,9 @@
-# 配置
+# 项目背景
+springboot项目，如果选择etcd作为配置中心，由于只有jetcd客户端，缺乏官方的starter，使用起来很不方便。为方便springboot集成etcd配置中心功能，
+开发了这个starter项目。
+
+# 使用步骤
+## 项目配置
 ### 1.maven配置
 ```xml
 <dependency>  
@@ -19,7 +24,7 @@ etcd:
     password: 
 ```
           
-# 使用
+## 注解使用
 ### 1.@EtcdPropertySource
 ```text
 作用：从etcd加载配置到environment。
@@ -112,7 +117,7 @@ public class EtcdListener {
 | @PropertySource | 	@EtcdPropertySource | 加载配置 |
 |  | 	@@EtcdConfigListener | 自定义通知方法 |
 
-# 原理
+# 原理剖析
 <img src="doc/etcd-starter.png" width="80%" />
 
 ```text
