@@ -1,0 +1,7 @@
+etcd:
+  config:
+    # 开启
+    enabled: true
+    server-addr: http://127.0.0.1:8379
+    username: root
+    password: 123456

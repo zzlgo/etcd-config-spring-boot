@@ -1,0 +1,4 @@
+# 配置在etcd里，测试yml型数据根据前缀进行注入
+basic:
+  name: lisi
+  age: 20

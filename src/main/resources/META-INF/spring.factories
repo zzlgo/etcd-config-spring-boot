@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.zzl.etcd.config.autoconfigure.EtcdConfigAutoConfiguration
