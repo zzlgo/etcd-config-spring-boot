@@ -15,7 +15,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.InjectionMetadata;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
+import org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.EnvironmentAware;
@@ -52,7 +52,7 @@ import static org.springframework.util.SystemPropertyUtils.VALUE_SEPARATOR;
  *
  * @author zzl on 2020-03-20.
  */
-public class EtcdValueAnnotationBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter implements MergedBeanDefinitionPostProcessor, BeanFactoryAware, EnvironmentAware {
+public class EtcdValueAnnotationBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor, MergedBeanDefinitionPostProcessor, BeanFactoryAware, EnvironmentAware {
 
     private static final Logger LOG = LoggerFactory.getLogger(EtcdValueAnnotationBeanPostProcessor.class);
     public static final String BEAN_NAME = "etcdValueAnnotationBeanPostProcessor";
